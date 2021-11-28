@@ -7,3 +7,4 @@ install:
 	docker exec $(APP_CONTAINER) sh -c "chown -R 1000:1000 /var/www/var"
 	docker exec $(APP_CONTAINER) sh -c "php bin/console doctrine:database:create"
 	docker exec $(APP_CONTAINER) sh -c "php bin/console doctrine:migrations:migrate"
+    docker exec $(APP_CONTAINER) sh -c "php bin/console lexik:jwt:generate-keypair"

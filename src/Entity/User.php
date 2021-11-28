@@ -15,31 +15,31 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ApiResource(
- *     attributes={
- *          "normalization_context"={
- *              "groups"={"get"}
- *          }
+ *   attributes={
+ *      "normalization_context"={
+ *        "groups"={"get"}
+ *      }
+ *   },
+ *   collectionOperations={
+ *     "get"={
+ *       "access_control"="is_granted('IS_AUTHENTICATED_FULLY')"
  *     },
- *     collectionOperations={
- *          "get"={
- *              "access_control"="is_granted('IS_AUTHENTICATED_FULLY')"
- *          },
- *          "post"={
- *              "access_control"="is_granted('ROLE_ADMIN')",
- *              "validation_groups"={"Default", "create"}
- *          },
+ *     "post"={
+ *       "access_control"="is_granted('ROLE_ADMIN')",
+ *       "validation_groups"={"Default", "create"}
  *     },
- *       itemOperations={
- *       "get"={
- *              "access_control"="is_granted('IS_AUTHENTICATED_FULLY')"
- *          },
- *          "put"={
- *              "access_control"="is_granted('ROLE_ADMIN')"
- *          },
- *          "delete"={
- *              "access_control"="is_granted('ROLE_ADMIN')"
- *          }
- *       }
+ *   },
+ *   itemOperations={
+ *     "get"={
+ *       "access_control"="is_granted('IS_AUTHENTICATED_FULLY')"
+ *     },
+ *     "put"={
+ *       "access_control"="is_granted('ROLE_ADMIN')"
+ *     },
+ *     "delete"={
+ *       "access_control"="is_granted('ROLE_ADMIN')"
+ *     }
+ *   }
  * )
  * @ApiFilter(SearchFilter::class, properties={"id": "exact", "email": "partial"})
  * @ORM\Entity(repositoryClass=UserRepository::class)

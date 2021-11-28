@@ -12,6 +12,7 @@
 - lancer la commande d'installation : "make install"
 
 ## URL
- - phpMyAdmin : http://127.0.0.1:8082/ (utiliser le compte root sans mot de passe)
- - documentation API : http://127.0.0.1:8741/api
- - MailDev : http://127.0.0.1:8081/
+
+- phpMyAdmin : http://127.0.0.1:8082/ (root sans mot de passe)
+- documentation API : http://127.0.0.1:8741/api/docs
+- MailDev : http://127.0.0.1:8081/
