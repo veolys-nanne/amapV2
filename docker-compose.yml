@@ -23,7 +23,7 @@ services:
         build: php
         container_name: www_docker_symfony
         ports:
-            - "8080:80"
+            - "8083:80"
         volumes:
             - ./php/vhosts:/etc/apache2/sites-enabled
             - ./:/var/www
@@ -38,7 +38,7 @@ services:
         depends_on:
             - db
         ports:
-            - "8081:80"
+            - "8084:80"
         environment:
             PMA_HOST: db
         networks:
@@ -49,7 +49,7 @@ services:
         container_name: maildev_docker_symfony
         command: bin/maildev --web 80 --smtp 25 --hide-extensions STARTTLS
         ports:
-            - "8082:80"
+            - "8085:80"
         restart: always
         networks:
             - dev

@@ -8,3 +8,4 @@ install:
 	docker exec $(APP_CONTAINER) sh -c "php bin/console doctrine:database:create"
 	docker exec $(APP_CONTAINER) sh -c "php bin/console doctrine:migrations:migrate"
     docker exec $(APP_CONTAINER) sh -c "php bin/console lexik:jwt:generate-keypair"
+    docker exec $(APP_CONTAINER) sh -c "php bin/console doctrine:fixtures:load"

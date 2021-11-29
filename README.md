@@ -13,6 +13,17 @@
 
 ## URL
 
-- phpMyAdmin : http://127.0.0.1:8082/ (root sans mot de passe)
-- documentation API : http://127.0.0.1:8741/api/docs
-- MailDev : http://127.0.0.1:8081/
+- accueil Symfony : http://127.0.0.1:8083/
+- documentation API : http://127.0.0.1:8083/api/docs
+- phpMyAdmin : http://127.0.0.1:8084/ (root sans mot de passe)
+- MailDev : http://127.0.0.1:8085/
+
+## Identification à l'API DOC
+
+- se rendre sur la documentation API http://127.0.0.1:8083/api/docs
+- aller dans la rubrique Token 'POST' '/api/login', bouton 'Try it out'
+- saisir '{"email": "amaphommesdeterre@etre-enchante.org", "password": "#AmapHommesDeTerre14"}'
+- cliquer sur la bouton 'execute'
+- copier la valeur du token (ex: 'eyJ0e...JLffg')
+- cliquer sur la bouton en haut à droite 'Authorize'
+- Entrer la valeur 'Bearer '+ token (ex: 'Bearer eyJ0e...JLffg') et valider
